@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">UAS_PROJEK</string>
+
+    <!-- BUTTON -->
+    <string name="Lvl1">1</string>
+    <string name="Lvl2">2</string>
+    <string name="Lvl3">3</string>
+    <string name="Lvl4">4</string>
+    <string name="Start">Start</string>
+    <string name="Profile">Profile</string>
+
+    <!-- TITLE -->
+    <string name="LvTitle">Level</string>
+    <string name="LvSelect1">Level One</string>
 </resources>

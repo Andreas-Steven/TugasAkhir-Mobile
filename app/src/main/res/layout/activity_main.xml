@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:background="#a83248">
 
-    <LinearLayout
+    <!-- <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back" />
-    </LinearLayout>
+    </LinearLayout> --> <!--Gak perlu back malah jadi repot nantinya-->
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -43,19 +43,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start" />
+            android:text="@string/Start" />
 
         <Button
             android:id="@+id/profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile" />
+            android:text="@string/Profile" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
