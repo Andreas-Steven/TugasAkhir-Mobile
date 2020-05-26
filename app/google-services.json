@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "418964388132",
+    "firebase_url": "https://vvibuumn-guesttheanimu.firebaseio.com",
+    "project_id": "vvibuumn-guesttheanimu",
+    "storage_bucket": "vvibuumn-guesttheanimu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418964388132:android:d4488e76c014606ce2dbb1",
+        "android_client_info": {
+          "package_name": "umn.ac.id.uas_projek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418964388132-ae803sgemulucejonbrbfuvmjjomjbd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmjFPugP913t1b92CUJwPK7VqD6EQIWI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418964388132-ae803sgemulucejonbrbfuvmjjomjbd3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

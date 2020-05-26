@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="umn.ac.id.uas_projek">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LevelFiveStage5"></activity>
+        <activity android:name=".LevelFiveStage4" />
+        <activity android:name=".LevelFiveStage3" />
+        <activity android:name=".LevelFiveStage2" />
+        <activity android:name=".LevelFiveStage1" />
+        <activity android:name=".LevelFourStage5" />
+        <activity android:name=".LevelFourStage4" />
+        <activity android:name=".LevelFourStage3" />
+        <activity android:name=".LevelFourStage2" />
+        <activity android:name=".LevelFourStage1" />
+        <activity android:name=".LevelThreeStage5" />
+        <activity android:name=".LevelThreeStage4" />
+        <activity android:name=".LevelThreeStage3" />
+        <activity android:name=".LevelThreeStage2" />
+        <activity android:name=".LevelThreeStage1" />
+        <activity android:name=".LevelTwoStage5" />
+        <activity android:name=".LevelTwoStage4" />
+        <activity android:name=".LevelTwoStage3" />
+        <activity android:name=".LevelTwoStage2" />
+        <activity android:name=".LevelTwoStage1" />
+        <activity android:name=".LevelFive" />
+        <activity android:name=".LevelFour" />
+        <activity android:name=".LevelThree" />
+        <activity android:name=".LevelTwo" />
+        <activity android:name=".LvlOneStageFive" />
+        <activity android:name=".LvlOneStageFour" />
+        <activity android:name=".LvlOneStageThree" />
+        <activity android:name=".LvlOneStageTwo" />
+        <activity android:name=".LvlOneStageOne" />
+        <activity android:name=".LevelOne" />
+        <activity android:name=".Level" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
