@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">UAS_PROJEK</string>
+    <string name="Nama">NAMA</string>
+    <string name="Score">SCORE</string>
+    <string name="Update">Update</string>
+    <string name="PlhFoto">Pilih Foto</string>
+    <string name="EditProfil">Edit Profil</string>
 </resources>
