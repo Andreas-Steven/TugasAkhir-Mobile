@@ -5,4 +5,18 @@
     <string name="Update">Update</string>
     <string name="PlhFoto">Pilih Foto</string>
     <string name="EditProfil">Edit Profil</string>
+
+    <string name="aboutus">About Us</string>
+
+    <string name="Autors1">Reynaldi</string>
+    <string name="Autors1NIM">00000025047</string>
+
+    <string name="Autors2">Andreas Steven</string>
+    <string name="Autors2NIM">00000020150</string>
+
+    <string name="Autors3">Bryan Leonardo</string>
+    <string name="Autors3NIM">00000020110</string>
+
+    <string name="Autors4">Adjie Kristiawan</string>
+    <string name="Autors4NIM">00000022161</string>
 </resources>

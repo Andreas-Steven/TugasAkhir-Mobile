@@ -7,7 +7,7 @@
     tools:context=".Level"
     android:background="#00FFFF">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back" />
-    </LinearLayout>
+    </LinearLayout>-->
 
 
     <TextView

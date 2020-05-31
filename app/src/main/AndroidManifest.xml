@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".EditProfile"></activity>
+        <activity android:name=".Credits"></activity>
+        <activity android:name=".EditProfile" />
         <activity android:name=".Profile" />
         <activity android:name=".LevelFiveStage5" />
         <activity android:name=".LevelFiveStage4" />
@@ -44,7 +44,6 @@
         <activity android:name=".LevelOne" />
         <activity android:name=".Level" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

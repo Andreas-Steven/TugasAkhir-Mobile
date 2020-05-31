@@ -45,8 +45,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00FFFF"
+            android:layout_marginBottom="35px"
             android:paddingHorizontal="65px"
             android:text="Profile" />
+
+        <Button
+            android:id="@+id/btnAboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFF"
+            android:paddingHorizontal="65px"
+            android:text="About Us" />
     </LinearLayout>
 
     <LinearLayout

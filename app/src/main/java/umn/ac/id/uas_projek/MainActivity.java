@@ -32,7 +32,7 @@ import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 public class MainActivity extends AppCompatActivity {
-    Button Start, Profile;
+    Button Start, Profile, AboutUs;
     private DatabaseReference mDatabase;
     private String ID;
     private String RdmNama;
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Start = findViewById(R.id.start);
         Profile = findViewById(R.id.profile);
+        AboutUs = findViewById(R.id.btnAboutUs);
         imageViewProfile = findViewById(R.id.imageViewProfile);
 
         File file = getFileStreamPath(FILE_NAME);
@@ -181,6 +182,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(IntentProfile);
             }
         });
+
+        AboutUs.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent IntentProfile = new Intent(MainActivity.this, Credits.class);
+                startActivity(IntentProfile);
+            }
+        });
     }
 
 
@@ -197,5 +207,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return result.toString();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        finishAffinity();
+        finish();
     }
 }

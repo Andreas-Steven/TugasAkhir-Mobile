@@ -16,12 +16,14 @@ import java.io.IOException;
 
 public class LevelThreeStage2 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-ImageView stage2;
+    ImageView stage2;
+    private static MediaPlayer mp = new MediaPlayer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_three_stage2);
-        btback = findViewById(R.id.back);
+        //btback = findViewById(R.id.back);
         bt1 = findViewById(R.id.butt1);
         bt2 = findViewById(R.id.butt2);
         bt3 = findViewById(R.id.butt3);
@@ -29,7 +31,6 @@ ImageView stage2;
         btplay = findViewById(R.id.playbutt);
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
-        final MediaPlayer mp = new MediaPlayer();
 
 
         stage2= findViewById(R.id.stage2);
@@ -111,5 +112,24 @@ ImageView stage2;
                 salah.show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        releaseMediaPlayer();
+        Intent intent = new Intent(LevelThreeStage2.this, LevelThree.class);
+        startActivity(intent);
+    }
+
+    private void releaseMediaPlayer()
+    {
+        if (mp!= null) {
+            if(mp.isPlaying()) {
+                mp.stop();
+            }
+            mp.release();
+            mp = null;
+        }
     }
 }

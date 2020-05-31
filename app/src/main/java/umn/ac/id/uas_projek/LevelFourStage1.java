@@ -17,11 +17,13 @@ import java.io.IOException;
 public class LevelFourStage1 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
     ImageView stage1;
+    private static MediaPlayer mp = new MediaPlayer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_four_stage1);
-        btback = findViewById(R.id.back);
+        //btback = findViewById(R.id.back);
         bt1 = findViewById(R.id.butt1);
         bt2 = findViewById(R.id.butt2);
         bt3 = findViewById(R.id.butt3);
@@ -29,8 +31,6 @@ public class LevelFourStage1 extends AppCompatActivity {
         btplay = findViewById(R.id.playbutt);
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
-        final MediaPlayer mp = new MediaPlayer();
-
 
         stage1 = findViewById(R.id.stage1);
         Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%204%2FNanatsu%20no%20Taizai.png?alt=media&token=1738ad9b-3472-4d94-8f08-e92d9fa9a017").into(stage1);
@@ -112,5 +112,24 @@ public class LevelFourStage1 extends AppCompatActivity {
                 startActivity(next);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        releaseMediaPlayer();
+        Intent intent = new Intent(LevelFourStage1.this, LevelFour.class);
+        startActivity(intent);
+    }
+
+    private void releaseMediaPlayer()
+    {
+        if (mp!= null) {
+            if(mp.isPlaying()) {
+                mp.stop();
+            }
+            mp.release();
+            mp = null;
+        }
     }
 }

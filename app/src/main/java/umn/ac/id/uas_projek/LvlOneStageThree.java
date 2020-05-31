@@ -17,12 +17,13 @@ import java.io.IOException;
 public class LvlOneStageThree extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
     ImageView stage3;
+    private static MediaPlayer mp = new MediaPlayer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lvl_one_stage_three);
-        btback = findViewById(R.id.back);
+        //btback = findViewById(R.id.back);
         bt1 = findViewById(R.id.butt1);
         bt2 = findViewById(R.id.butt2);
         bt3 = findViewById(R.id.butt3);
@@ -30,8 +31,6 @@ public class LvlOneStageThree extends AppCompatActivity {
         btplay = findViewById(R.id.playbutt);
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
-        final MediaPlayer mp = new MediaPlayer();
-
 
         stage3 = findViewById(R.id.stage3);
         Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%201%2FHello.jpg?alt=media&token=ed1e584f-90c8-4ed0-bb01-2f97b5c5f2e5").into(stage3);
@@ -113,5 +112,24 @@ public class LvlOneStageThree extends AppCompatActivity {
                 startActivity(next);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        releaseMediaPlayer();
+        Intent intent = new Intent(LvlOneStageThree.this, LevelOne.class);
+        startActivity(intent);
+    }
+
+    private void releaseMediaPlayer()
+    {
+        if (mp!= null) {
+            if(mp.isPlaying()) {
+                mp.stop();
+            }
+            mp.release();
+            mp = null;
+        }
     }
 }

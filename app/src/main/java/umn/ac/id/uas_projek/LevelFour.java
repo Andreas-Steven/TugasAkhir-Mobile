@@ -14,7 +14,7 @@ public class LevelFour extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_four);
-        btback = findViewById(R.id.back);
+        //btback = findViewById(R.id.back);
         st1 = findViewById(R.id.Lv1);
         st2 = findViewById(R.id.Lv2);
         st3 = findViewById(R.id.Lv3);
@@ -66,5 +66,12 @@ public class LevelFour extends AppCompatActivity {
                 startActivity(IntentLevel5);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(LevelFour.this, MainActivity.class);
+        startActivity(intent);
     }
 }

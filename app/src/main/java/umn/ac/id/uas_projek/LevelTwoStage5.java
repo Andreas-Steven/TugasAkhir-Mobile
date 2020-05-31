@@ -17,11 +17,13 @@ import java.io.IOException;
 public class LevelTwoStage5 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
     ImageView stage5;
+    private static MediaPlayer mp = new MediaPlayer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_two_stage5);
-        btback = findViewById(R.id.back);
+        //btback = findViewById(R.id.back);
         bt1 = findViewById(R.id.butt1);
         bt2 = findViewById(R.id.butt2);
         bt3 = findViewById(R.id.butt3);
@@ -29,9 +31,8 @@ public class LevelTwoStage5 extends AppCompatActivity {
         btplay = findViewById(R.id.playbutt);
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
-        final MediaPlayer mp = new MediaPlayer();
 
-        stage5 = findViewById(R.id.stage4);
+        stage5 = findViewById(R.id.stage5);
         Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%202%2Fdfrag.jpg?alt=media&token=b57bd486-dd42-4c61-9e68-d954b7ace395").into(stage5);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
@@ -110,5 +111,24 @@ public class LevelTwoStage5 extends AppCompatActivity {
                 salah.show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        releaseMediaPlayer();
+        Intent intent = new Intent(LevelTwoStage5.this, LevelTwo.class);
+        startActivity(intent);
+    }
+
+    private void releaseMediaPlayer()
+    {
+        if (mp!= null) {
+            if(mp.isPlaying()) {
+                mp.stop();
+            }
+            mp.release();
+            mp = null;
+        }
     }
 }
