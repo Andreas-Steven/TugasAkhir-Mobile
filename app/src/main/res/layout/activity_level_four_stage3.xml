@@ -46,9 +46,9 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageView
+            android:id="@+id/stage3"
             android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:background="@drawable/tari" />
+            android:layout_height="200dp"/>
 
         <Button
             android:id="@+id/playbutt"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15px"
                 android:background="#00FFFF"
-                android:text="Tara Tari" />
+                android:text="Narto Shippuden" />
 
             <Button
                 android:id="@+id/butt2"
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15px"
                 android:background="#00FFFF"
-                android:text="Tari Tari" />
+                android:text="Naruto Shippuden" />
 
             <Button
                 android:id="@+id/butt4"
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15px"
                 android:background="#00FFFF"
-                android:text="Tari Tara" />
+                android:text="Naruto" />
 
         </TableRow>
 

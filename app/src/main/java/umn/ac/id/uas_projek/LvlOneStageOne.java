@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,11 +16,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LvlOneStageOne extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
+    ImageView stage1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,8 @@ public class LvlOneStageOne extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        stage1 = findViewById(R.id.stage1);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%201%2FGakkou%20Gurashi.jpg?alt=media&token=b14923c6-4d4c-490c-9a70-4edd4135c83b").into(stage1);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -53,7 +58,7 @@ public class LvlOneStageOne extends AppCompatActivity {
                 try
                 {
                     // Gakkougurashi!
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/gakkougurashiharmonizedclover.mp3?alt=media&token=82a22551-72a9-4a95-b654-33e3d8875a5f"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%201%2FGakkou%20GurashiHarmonized%20Clover.mp3?alt=media&token=281ef8c2-24f5-4c9c-b99e-426026ef6dad"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override
@@ -113,5 +118,6 @@ public class LvlOneStageOne extends AppCompatActivity {
                 salah.show();
             }
         });
+
     }
 }

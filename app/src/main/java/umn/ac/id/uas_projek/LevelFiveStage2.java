@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,10 @@ public class LevelFiveStage2 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        ImageView stage2;
+        stage2 = findViewById(R.id.stage2);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%205%2Fshin.jpg?alt=media&token=b7a37ada-6ff9-4228-a489-5e9ee5a82779").into(stage2);
+
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +52,7 @@ public class LevelFiveStage2 extends AppCompatActivity {
                 try
                 {
                     // Shinryaku!? Ika Musume
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Shinryaku!%20Ika%20Musume%20OP.mp3?alt=media&token=cc9bfa29-83bc-4fd4-822e-7ee66d06dbfe"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%205%2FShinryaku!%20Ika%20Musume%20OP.mp3?alt=media&token=6b1d854d-2068-43ac-8e71-8600c66ab97a"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

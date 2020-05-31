@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,11 @@ public class LevelFourStage5 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        ImageView  stage5;
+        stage5 = findViewById(R.id.stage5);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%204%2Fano.jpg?alt=media&token=e6a14d7a-fc54-4b92-a0d7-7322ef2d113e").into(stage5);
+
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +53,7 @@ public class LevelFourStage5 extends AppCompatActivity {
                 try
                 {
                     // Ano Natsu de Matteru
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Ano%20Natsu%20de%20Matteru%20Opening.mp3?alt=media&token=63edc443-b71c-45e7-a0f8-c3fa7e582c85"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%204%2FAno%20Natsu%20de%20Matteru%20Opening.mp3?alt=media&token=2d1c0b60-9bdb-4881-bd66-61aa3e5efb40"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

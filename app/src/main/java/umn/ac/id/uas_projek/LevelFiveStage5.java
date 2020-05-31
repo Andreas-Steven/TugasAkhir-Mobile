@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,10 @@ public class LevelFiveStage5 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        ImageView stage5;
+        stage5 = findViewById(R.id.stage5);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%205%2Finfi.jpg?alt=media&token=d5303738-c4de-4d47-b8f5-48d31614ddd4").into(stage5);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +52,7 @@ public class LevelFiveStage5 extends AppCompatActivity {
                 try
                 {
                     // Infinite Stratos
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Infinite%20Stratos%20OPENING.mp3?alt=media&token=29f2c300-3716-4cac-acf7-5082455895ad"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%205%2FInfinite%20Stratos%20OPENING.mp3?alt=media&token=841c7ff5-b969-4fa7-90dc-2fadf09d9e68"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

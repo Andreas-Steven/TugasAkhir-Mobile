@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelThreeStage3 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+    ImageView stage3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,9 @@ public class LevelThreeStage3 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        stage3 = findViewById(R.id.stage3);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%203%2Fyahari.jpg?alt=media&token=661978ac-0855-4a24-9b91-ae4298dee34d").into(stage3);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +51,7 @@ public class LevelThreeStage3 extends AppCompatActivity {
                 try
                 {
                     // Yahari Ore no Seishun Love Comedy wa Machigatteiru
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/oreigairuops1.mp3?alt=media&token=d50eda60-3e0f-45f6-9b23-9c36e387da44"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%203%2FOreigairu%20OP%20S1.mp3?alt=media&token=0e4a2fff-a7ee-4465-af1b-82e4f58d81ec"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

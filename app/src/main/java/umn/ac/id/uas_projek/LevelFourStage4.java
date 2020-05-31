@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,12 @@ public class LevelFourStage4 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        ImageView stage4;
+        stage4 = findViewById(R.id.stage4);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%204%2Fdxd.jpg?alt=media&token=6b5fe4f3-7ecc-452e-8b90-66eeaef58cbc").into(stage4);
+
+
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +54,7 @@ public class LevelFourStage4 extends AppCompatActivity {
                 try
                 {
                     // High School DxD
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/High%20School%20DxD%20-%20OP%201.mp3?alt=media&token=7a9ae559-a860-4378-9740-08cb7a21ac87"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%204%2FHigh%20School%20DxD%20-%20OP%201.mp3?alt=media&token=af61b996-f5ea-4684-9b15-90179752a302"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,10 @@ public class LevelFiveStage4 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        ImageView stage4;
+        stage4 = findViewById(R.id.stage4);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%205%2Fhidan.jpg?alt=media&token=b5e03131-de8c-4019-9562-ba3d5b43352f").into(stage4);
+
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +52,7 @@ public class LevelFiveStage4 extends AppCompatActivity {
                 try
                 {
                     // Hidan no Aria
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Hidan%20no%20Aria%20Opening.mp3?alt=media&token=74da14c1-9e08-4bd4-9097-cbc30b92a6d8"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%205%2FHidan%20no%20Aria%20Opening.mp3?alt=media&token=ba004da4-eff3-43b6-8fdf-b1530c57a21f"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

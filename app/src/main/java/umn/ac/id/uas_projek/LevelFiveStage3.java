@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,10 @@ public class LevelFiveStage3 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        ImageView stage3;
+        stage3 = findViewById(R.id.stage3);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%205%2Fnich.jpg?alt=media&token=7266f2e9-e624-468f-88fe-c02529cb6d36").into(stage3);
+
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +52,7 @@ public class LevelFiveStage3 extends AppCompatActivity {
                 try
                 {
                     // Nichijou
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Nichijou%20ED%206%20-%20My%20Ballad%20(192%20%20kbps).mp3?alt=media&token=c2bc63a3-48e4-44f5-a464-36b35a344c6a"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%205%2FNichijou%20ED%206%20-%20My%20Ballad%20(192%20%20kbps).mp3?alt=media&token=8a1f86f8-0e69-4a61-9f2c-583df7fd92b8"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

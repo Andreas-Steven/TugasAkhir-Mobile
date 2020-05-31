@@ -7,12 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LvlOneStageThree extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
+    ImageView stage3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,9 @@ public class LvlOneStageThree extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        stage3 = findViewById(R.id.stage3);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%201%2FHello.jpg?alt=media&token=ed1e584f-90c8-4ed0-bb01-2f97b5c5f2e5").into(stage3);
         /*btback.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -46,7 +53,7 @@ public class LvlOneStageThree extends AppCompatActivity {
                 try
                 {
                     // Kimiiro Mosaic
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/yumeiroparade.mp3?alt=media&token=840ce37e-2eb4-423a-8676-afefc72f4a4a"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%201%2FYumeiro%20Parade-Hello!!Kin%20iro%20Mosaic.mp3?alt=media&token=7c981c21-7985-4299-b1a3-d14b84fd9c41"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

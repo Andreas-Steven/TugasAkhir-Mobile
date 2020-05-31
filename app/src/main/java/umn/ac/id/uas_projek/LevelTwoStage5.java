@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelTwoStage5 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+    ImageView stage5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,8 @@ public class LevelTwoStage5 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        stage5 = findViewById(R.id.stage4);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%202%2Fdfrag.jpg?alt=media&token=b57bd486-dd42-4c61-9e68-d954b7ace395").into(stage5);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +50,7 @@ public class LevelTwoStage5 extends AppCompatActivity {
                 try
                 {
                     // D-Frag!
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/dfrag.mp3?alt=media&token=d35e2b95-c176-4bfc-8269-a10820dc9fb2"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%202%2FD-Frag%20OP.mp3?alt=media&token=71389996-c3bf-4394-9c0d-dc5189d31cfc"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

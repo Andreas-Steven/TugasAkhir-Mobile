@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LvlOneStageFive extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+    ImageView stage5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,9 @@ public class LvlOneStageFive extends AppCompatActivity {
             }
         });*/
 
+        stage5 = findViewById(R.id.stage5);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%201%2FShigatsu%20wa%20Kimi%20no%20Uso.jpg?alt=media&token=2ee8cb61-5783-4883-a400-41b8a0f50a78").into(stage5);
+
         btplay.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -46,7 +52,7 @@ public class LvlOneStageFive extends AppCompatActivity {
                 try
                 {
                     // Shigatsu wa Kimi no Uso
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/hikarunarashigatsuwakiminouso.mp3?alt=media&token=e0bec4c8-12ee-449e-b7e5-d96834473f2b"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%201%2FHikaru%20Nara%20-Shigatsu%20wa%20Kimi%20no%20Uso.mp3?alt=media&token=aa15416d-0f51-4446-9eba-14e935b2b483"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

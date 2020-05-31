@@ -7,12 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LvlOneStageFour extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
+    ImageView stage4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class LvlOneStageFour extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        stage4 = findViewById(R.id.stage4);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%201%2FShirobako.jpeg?alt=media&token=a01732be-2a6c-43a1-bc90-0545d3911fc2").into(stage4);
         /*btback.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -46,7 +52,7 @@ public class LvlOneStageFour extends AppCompatActivity {
                 try
                 {
                     // Shirobako
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/shirobakocolorfullbox.mp3?alt=media&token=5c40c8dc-eca4-4134-9c3a-7474c1e48375"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%201%2FShirobako-Colorfull%20BOX.mp3?alt=media&token=79112c34-26e3-4f9a-aee2-c2afba4324e3"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

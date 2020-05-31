@@ -7,12 +7,17 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelTwoStage3 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
+    ImageView stage3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +32,9 @@ public class LevelTwoStage3 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        stage3 = findViewById(R.id.stage3);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%202%2Froku.jpg?alt=media&token=fefa3aff-3d7e-4aa2-b8f3-3c84a93d633b").into(stage3);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -44,7 +52,7 @@ public class LevelTwoStage3 extends AppCompatActivity {
                 try
                 {
                     // Rokujouma no Shinryakusha!?
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/rokujoumaop.mp3?alt=media&token=b76b4de5-ca86-4523-bd3c-72dfa70b4bc8"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%202%2FRokujouma%20OP.mp3?alt=media&token=4ce2cef4-86d0-4319-b97e-44603c8cfa9b"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

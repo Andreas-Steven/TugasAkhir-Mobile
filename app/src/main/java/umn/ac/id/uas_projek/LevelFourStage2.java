@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,9 @@ public class LevelFourStage2 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        ImageView stage2;
+        stage2 = findViewById(R.id.stage2);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%204%2Fkokoro.jpg?alt=media&token=78473e7b-523c-4622-a5ff-5a4c109c8f2f").into(stage2);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +51,7 @@ public class LevelFourStage2 extends AppCompatActivity {
                 try
                 {
                     // Kokoro Connect
-                    mp.setDataSource(""); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%204%2FKokoro%20Connect%20ED%201%20%5BShell%20of%20my%20Heart-Kokoro%20no%20Kara%5D.mp3?alt=media&token=67c6b6f9-b8b3-489c-8a6e-2f2545c4017e"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

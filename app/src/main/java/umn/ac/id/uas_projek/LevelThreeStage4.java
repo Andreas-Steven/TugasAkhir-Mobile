@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelThreeStage4 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+    ImageView stage4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,9 @@ public class LevelThreeStage4 extends AppCompatActivity {
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
+
+        stage4 = findViewById(R.id.stage4);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%203%2Fboku.jpg?alt=media&token=f2322c4b-cdf5-45ec-a685-f465c6714795").into(stage4);
 
         //btback.setOnClickListener(new View.OnClickListener()
         //{
@@ -45,7 +51,7 @@ public class LevelThreeStage4 extends AppCompatActivity {
                 try
                 {
                     // Boku wa Tomodachi ga Sukunai Next
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Boku%20Wa%20Tomodachi%20Ga%20Sukunai%20-%20Futari%20no%20Kisetsu%20(192%20%20kbps).mp3?alt=media&token=f5ed3cce-b030-4775-88ff-222795077416"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%203%2FBoku%20Wa%20Tomodachi%20Ga%20Sukunai%20-%20Futari%20no%20Kisetsu%20(192%20%20kbps).mp3?alt=media&token=32096833-3052-4be0-b615-aef6fbe6616a"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

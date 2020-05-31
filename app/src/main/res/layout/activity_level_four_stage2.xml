@@ -11,14 +11,11 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00FFFF"
-            android:text="Back" />
     </LinearLayout>
 
     <LinearLayout
@@ -46,9 +43,9 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageView
+            android:id="@+id/stage2"
             android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:background="@drawable/kokoro" />
+            android:layout_height="200dp"/>
 
         <Button
             android:id="@+id/playbutt"
@@ -86,6 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15px"
+                android:padding="15dp"
                 android:background="#00FFFF"
                 android:text="Hato Connect" />
 
@@ -101,6 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15px"
+                android:padding="15dp"
                 android:background="#00FFFF"
                 android:text="Kokoro Connect" />
 
@@ -115,5 +114,14 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFF"
+        android:text="Back"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

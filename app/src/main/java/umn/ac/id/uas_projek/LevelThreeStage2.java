@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelThreeStage2 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+ImageView stage2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,9 @@ public class LevelThreeStage2 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        stage2= findViewById(R.id.stage2);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%203%2Fgin.jpg?alt=media&token=dcbeeb63-e72d-4067-b48a-2105518af7ef").into(stage2);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +51,7 @@ public class LevelThreeStage2 extends AppCompatActivity {
                 try
                 {
                     // Gin no Saji
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/ginnosajiop.mp3?alt=media&token=a2da734c-d8f1-4e9b-8a34-13d653bd4214"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%203%2FGin%20no%20Saji%20OP.mp3?alt=media&token=a1c523e3-c419-4cd3-aece-2e94555a4e6f"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

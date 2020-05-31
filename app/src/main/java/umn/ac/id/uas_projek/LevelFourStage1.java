@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelFourStage1 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+    ImageView stage1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,10 @@ public class LevelFourStage1 extends AppCompatActivity {
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
+
+
+        stage1 = findViewById(R.id.stage1);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%204%2FNanatsu%20no%20Taizai.png?alt=media&token=1738ad9b-3472-4d94-8f08-e92d9fa9a017").into(stage1);
 
         //btback.setOnClickListener(new View.OnClickListener()
         //{
@@ -45,7 +52,7 @@ public class LevelFourStage1 extends AppCompatActivity {
                 try
                 {
                     // Nanatsu no Taizai
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Nanatsu%20no%20Taizai%20-%20OP%201.mp3?alt=media&token=0b8e3f97-1237-4ea8-85b8-53a70107a5a5"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%204%2FNanatsu%20no%20Taizai%20-%20OP%201.mp3?alt=media&token=750f3e13-3fc4-417e-be8e-515fc4b417e3"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

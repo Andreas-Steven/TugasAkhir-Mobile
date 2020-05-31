@@ -7,12 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelTwoStage2 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
+    ImageView stage2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,9 @@ public class LevelTwoStage2 extends AppCompatActivity {
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
+
+        stage2 = findViewById(R.id.stage2);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%202%2Famagi.jpg?alt=media&token=a660c8b9-4e7d-4c60-bce3-d90f568d911d").into(stage2);
 
         //btback.setOnClickListener(new View.OnClickListener()
         //{
@@ -44,7 +51,7 @@ public class LevelTwoStage2 extends AppCompatActivity {
                 try
                 {
                     // Amagi Brilliant Park
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/amagi_op.mp3?alt=media&token=2de67d39-13a7-48dc-acb0-9b74588f5356"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%202%2FAmagi%20_%20OP.mp3?alt=media&token=7dcb2713-5ebf-4cf5-bfee-50e4574f4245"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

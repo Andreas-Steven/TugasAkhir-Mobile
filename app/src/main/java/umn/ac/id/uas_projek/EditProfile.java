@@ -66,6 +66,9 @@ public class EditProfile extends AppCompatActivity
                 database.setValue(NewData);
 
                 Toast.makeText(getApplicationContext(), "Your Profile Has Been Updated", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(EditProfile.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

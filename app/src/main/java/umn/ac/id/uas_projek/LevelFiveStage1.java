@@ -7,7 +7,10 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -28,6 +31,10 @@ public class LevelFiveStage1 extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+
+        ImageView stage1;
+        stage1 = findViewById(R.id.stage1);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%205%2Fidol.jpg?alt=media&token=ad700f8f-d29f-49f5-848a-abb9fea81832").into(stage1);
         //btback.setOnClickListener(new View.OnClickListener()
         //{
         //    @Override
@@ -45,7 +52,7 @@ public class LevelFiveStage1 extends AppCompatActivity {
                 try
                 {
                     // The iDOLM@STER
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/The%20Idolmaster%20OP.mp3?alt=media&token=a222baf5-e112-410a-ad89-24958bee325c"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%205%2FThe%20Idolmaster%20OP.mp3?alt=media&token=822cb544-edca-4e66-ba54-fb02dc905c16"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

@@ -7,13 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LevelThreeStage5 extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
-
+    ImageView stage5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,11 @@ public class LevelThreeStage5 extends AppCompatActivity {
         final Toast benar = Toast.makeText(getApplicationContext(),"Sugoi!!!", Toast.LENGTH_SHORT);
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
+
+
+        stage5 = findViewById(R.id.stage5);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%203%2Fsakura.jpg?alt=media&token=583111a6-221e-4c96-8d2c-df2cc04c5990").into(stage5);
+
 
         //btback.setOnClickListener(new View.OnClickListener()
         //{
@@ -45,7 +53,7 @@ public class LevelThreeStage5 extends AppCompatActivity {
                 try
                 {
                     // Sakurasou no Pet na Kanojo
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Sakurasou%20no%20Pet%20na%20Kanojo%20OP%202%20-%20Yume%20no%20Tsuzuki.mp3?alt=media&token=8abf94a3-0be8-4dd9-a9da-0c967378b865"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%203%2FSakurasou%20no%20Pet%20na%20Kanojo%20OP%202%20-%20Yume%20no%20Tsuzuki.mp3?alt=media&token=eea42958-fae3-4298-9347-b49c04e5ce92"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override

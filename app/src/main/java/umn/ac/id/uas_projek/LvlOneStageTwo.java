@@ -7,12 +7,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
 public class LvlOneStageTwo extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, btplay, btback;
+    ImageView stage2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class LvlOneStageTwo extends AppCompatActivity {
         final Toast salah = Toast.makeText(getApplicationContext(),"Non!!!", Toast.LENGTH_SHORT);
         final MediaPlayer mp = new MediaPlayer();
 
+        stage2 = findViewById(R.id.stage2);
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Gambar_Stage%2FStage%201%2FSaenai.png?alt=media&token=c78c28d6-6d64-4148-a7e7-e56aab19eec6").into(stage2);
         /*btback.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -46,7 +52,7 @@ public class LvlOneStageTwo extends AppCompatActivity {
                 try
                 {
                     // Saenai Heroine no Sodatekata
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/kimiirosignalluna_haruna.mp3?alt=media&token=bc4a11b1-3528-4bc5-9ee1-83cdc25d866f"); // Link dari Firebase Storage
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/vvibuumn-guesttheanimu.appspot.com/o/Musik%2FStage%201%2FKimiiro%20Signal%20-%20Luna_Haruna-%20Saenai%20Heroine%20no%20Sodatekata.mp3?alt=media&token=2da4e8e2-25fa-47db-9367-17cad4a16074"); // Link dari Firebase Storage
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
                     {
                         @Override
