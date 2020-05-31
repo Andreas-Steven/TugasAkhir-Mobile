@@ -71,7 +71,7 @@ public class LevelTwo extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        Intent intent = new Intent(LevelTwo.this, MainActivity.class);
+        Intent intent = new Intent(LevelTwo.this, Level.class);
         startActivity(intent);
     }
 }

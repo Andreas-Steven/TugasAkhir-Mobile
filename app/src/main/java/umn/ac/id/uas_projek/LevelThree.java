@@ -71,7 +71,7 @@ public class LevelThree extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        Intent intent = new Intent(LevelThree.this, MainActivity.class);
+        Intent intent = new Intent(LevelThree.this, Level.class);
         startActivity(intent);
     }
 }
